@@ -5,84 +5,401 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Interactive Page</title>
+    <link rel="stylesheet" href="miniproj_mainInteractive.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
 </head>
 <body>
-    <ul class="navi">
-        <li></li>
-    </ul>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <ul class="navbar">
+            <li class="navbar-items">Student Profile</li>
+            <li class="navbar-items"><img src = "baba_t.webp" width ="180px"></li>
+             <li class="navbar-items">Student id#</li>
+             <li class="navbar-items">Student Name</li>
+             <li class="navbar-items">Grade</li>
+              <li class="navbar-items">Section</li>
+              <li class="navbar-items">Best Subject</li>
+              <li class="navbar-items">Worst Subject</li>
+        
+      </div>
+      
+      <div id="main">
+       <div class="miniNav">
+        <button id ="btns" class="openbtn" onclick="openNav()" >☰</button>  
+        
+        </div>
     <div class="welcome_card">
-        <h1 class="welcome_h1">WELCOME TO THE INTERACTIVE WEBISTE</h1>
+        <h1>WELCOME TO THE INTERACTIVE WEBISTE</h1>
         <h2 class="message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui nulla libero commodi a quaerat aperiam.</h2>
     </div>
-    <div class="grid-conti">
-        <div class="grid_card">Games
+    <h1 align="center" >Fun Learning Activities</h1>
+    <section class="grid_container">
 
-            <div class="game_modal">Overview
        
-                <div class="game_modal_container">
+        <div class="grid_card">
+           
+            <div class="card_content">
 
-                    <div class="game_modal_content">
-                        <h1>Subject</h1>
-                        <h3>Math</h3>
-                        <h3>Science</h3>
-                        <h3>English</h3>
-                        <h3>Filipino</h3>
-                        <h3>History</h3>
-                    </div>
-                </div>
+            <h1 class ="card_title">Games</h1>
+            <!--Trigger-->
+            <p class="card-body">Learning made fun! try our interactive learning games and start learning the fun way  </br> <button id="myBtn">
+                View Games
+              </button></p>
+           
             </div>
+            
         </div>
 
-        <div class="grid_card">Activities
 
-            <div class="activity_modal">Overview
+              <!--modal-->
+                 <div id="myModal" class="modal">
+                    <!--modal content-->
+                    <div class="modal-content">
+                         <span class="close">&times;</span>
+                       
+                        
+                        <h2>Subjects</h2>
+                        <div class="modalContainer">
+                          
+                                <div class="modalCard" style = "background-image: url(math.jpg);
+                                background-size:cover; background-position:center; background-size:cover;">
+                                <div class ="modalCContent">
+                            <h3 class = "modal_title">Math</h3>
+                            <p class = "card-body">
+                       
+                        <input type = "button" value = "Play Game">
+                        </p>
+                        </div>
+                            </div>
 
-                <div class="activity_modal_container">
+                            <div class="modalCard" style = "background-image: url(science.png);
+                            background-size:cover; background-position:center; background-size:cover;">
+                            <div class ="modalCContent">
 
-                    <div class="activity_modal_content">
-                        <h1>
-                            SUBJECTS
-                        </h1>
-                        <h3>Math</h3>
-                        <h3>Science</h3>
-                        <h3>English</h3>
-                        <h3>Filipino</h3>
-                        <h3>History</h3>
+                        <h3 class = "modal_title">Science</h3>
+                        <p class = "card-body">
+                       
+                        <input type = "button" value = "Play Game">
+                        </p>
+                        </div>
+                            </div>
 
+
+                             <div class="modalCard" style = "background-image: url(english.jpg);
+                            background-size:cover; background-position:center; background-size:cover;">
+                            <div class ="modalCContent">
+                        <h3 class = "modal_title">English</h3>
+                        <p class = "card-body">
+                        
+                        <input type = "button" value = "Play Game">
+                        </p>
+                        </div>
+                            </div>
+
+                            <div class="modalCard" style = "background-image: url(english.jpg);
+                            background-size:cover; background-position:center; background-size:cover;">
+                            <div class ="modalCContent">
+                        <h3 class = "modal_title">Filipino</h3>
+                        <p class = "card-body">
+                        
+                        <input type = "button" value = "Play Game">
+                        </p>
+                        </div>
+                            </div>
+
+                            <div class="modalCard" style = "background-image: url(history.jpg);
+                            background-size:cover; background-position:center; background-size:cover;">
+                            <div class ="modalCContent">
+                        <h3 class = "modal_title">History</h3>
+                        <p class = "card-body">
+                       
+                        <input type = "button" value = "Play Game">
+                        </p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+        
+
+        <div class="grid_card">
+
+            <div class="card_content">
+
+            <h1 class ="card_title">Activities & Quizzes</h1>
+           
+             <p class="card-body">Learning made fun! try our interactive learning games and start learning the fun way </br><button id="aBtn">View Activities & Quizzes</button></p>
+                  </div>
+            </div>
+                <div id="aModal" class ="modal">
+
+                    <div class="modal-content">
+                        <span class="aclose">&times;</span>
+
+                       <h2 style = "background: linear-gradient(
+                        rgb(21, 232, 130),
+                        rgb(7, 152, 41) 10%,
+                        rgb(6, 115, 12)
+                    ); padding: .5rem; font-size:18px; width: 100%; border-radius: 2rem;">Subjects</h2>
+                        <div class="modalContainer">
+                         
+                            <div class="modalCard" style = "background-image: url(math.jpg);
+                            background-size:cover; background-position:center; background-size:cover;">
+                           <div class ="modalCContent">
+                        <h3 class = "modal_title">Math</h3>
+                        <p class = "card-body"></p>
+                        <input type = "button" value = "Begin Activity">
+                        <input type = "button" value = "Begin Quiz">
+                           </p>
+                    </div>  
+                            </div>
+
+                            <div class="modalCard" style = "background-image: url(science.png);
+                            background-size:cover; background-position:center; background-size:cover;">
+                            <div class ="modalCContent">
+                        <h3 class = "modal_title">Science</h3>
+                        <p class = "card-body">
+                        <input type = "button" value = "Begin Activity">
+                        <input type = "button" value = "Begin Quiz">
+                            </p>
+                                </div>
+                            </div>
+
+                            <div class="modalCard" style = "background-image: url(english.jpg);
+                            background-size:cover; background-position:center; background-size:cover;">
+                            <div class ="modalCContent">
+                        <h3 class = "modal_title">English</h3>
+                        <p class = "card-body">
+                        <input type = "button" value = "Begin Activity">
+                        <input type = "button" value = "Begin Quiz">
+                            </p>
+                                </div>
+                            </div>
+
+                            <div class="modalCard" style = "background-image: url(science.png);
+                            background-size:cover; background-position:center; background-size:cover;">
+
+                            <div class ="modalCContent">
+                        <h3 class = "modal_title">Filipino</h3>
+                         <p class = "card-body">
+                        <input type = "button" value = "Begin Activity">
+                        <input type = "button" value = "Begin Quiz">
+                            </p>
+                         </div>
+                            </div>
+
+                            <div class="modalCard" style = "background-image: url(history.jpg);
+                            background-size:cover; background-position:center; background-size:cover;">   
+                            <div class ="modalCContent">
+                        <h3 class = "modal_title">History</h3>
+                        <p class = "card-body">
+                        <input type = "button" value = "Begin Activity">
+                        <input type = "button" value = "Begin Quiz">
+                            </p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
                         <a href="#">View Progress</a>
+                        <a href="#">View Scores</a>
                         <!--View activities here-->
-                        <h2>Activities</h2>
+                        
                         <!--list of activities-->
                     </div>
-                </div>   
-            </div>
-        </div>
+             
+                </div>
+               
+        
 
-        <div class="grid_card">Quizes
+<!--
+        <div class="grid_card">
+            <div class="card_content">
 
-            <div class="game_modal">Overview
+            <h1 class ="card_title"> Quizzes</h1>
 
-                <div class="activity_modal_container">
+            <button id="bBtn">
+                View Quizes
+              </button>
+            </div>     
+        </div>  
 
-                    <div class="activity_modal_content">
-                        <h1 class="quiz_subjects">
-                            SUBJECTS
-                        </h1>
+                <div id="bModal" class = "modal">
+                    <div class="modal-content">
+
+                        <span class="bclose">&times;</span>
+
+                        <h2>Subjects</h2>
+                        <input type = "button" value = "Begin Quiz">
                         <h3>Math</h3>
+                        <input type = "button" value = "Begin Quiz">
                         <h3>Science</h3>
+                        <input type = "button" value = "Begin Quiz">
                         <h3>English</h3>
+                        <input type = "button" value = "Begin Quiz">
                         <h3>Filipino</h3>
+                        <input type = "button" value = "Begin Quiz">
                         <h3>History</h3>
+                        <input type = "button" value = "Begin Quiz">
+
+                        
 
 
                     </div>
                 </div>
-            </div>     
-        </div>
+                -->
        
-        
     </div>
-    
+</section> 
+
+ 
+<section class="mileStones">
+    <h1>STUDENT MILESTONES</h1>
+    <div class="mileCont">
+        
+
+        <div class="mileContCard">
+            <div class="CcContent">
+                <h1 class ="mile_title">Quiz Standing</h1>
+            </div>
+           
+        </div>
+        <div class="mileContCard">
+            <div class="CcContent">
+            <h1 class ="mile_title">Activity Score</h1>
+            </div>
+        </div>
+        <div class="mileContCard">
+            <div class="CcContent">
+            <h1 class ="mile_title">Game Highscore</h1>
+            </div>
+        </div>
+
+    </div>
+</section>
+</div>
+<section class = "footer">
+    <div class="footer-content">
+        <h3>Interactive Website</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non recusandae, ipsum nihil necessitatibus iste explicabo!</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy; <a href="#">Group 1</a> </p>
+                <div class="footer-menu">
+                  <ul class="f-menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                  </ul>
+                </div>
+    </div>
+
+</section>
+
+    <script>
+        //modal 1
+             // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+//mmodal2
+var modal2 = document.getElementById("aModal");
+
+// Get the button that opens the modal
+var btn2 = document.getElementById("aBtn");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("aclose")[0];
+
+// When the user clicks on the button, open the modal
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event2) {
+  if (event2.target == modal) {
+    modal2.style.display = "none";
+  }
+}
+
+//modal3
+var modal3 = document.getElementById("bModal");
+
+// Get the button that opens the modal
+var btn3 = document.getElementById("bBtn");
+
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("bclose")[0];
+
+// When the user clicks on the button, open the modal
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event3) {
+  if (event3.target == modal) {
+    modal3.style.display = "none";
+  }
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("btns").style.visibility = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("btns").style.visibility = "visible";
+}
+</script>
+
+
     
 </body>
+
 </html>
